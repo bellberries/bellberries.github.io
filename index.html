@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserve Strawberries</title>
+    <title>Bell Berries</title>
     <link rel="stylesheet" href="../main.css">
     <link rel="icon" type="image/x-icon" href="../content/favicon.ico">
 </head>
 <body>
     <div class="navbar">
         <div class="navbar-left">
-            <a href="../open/" class="logo">Bell Berries</a>
+            <a href="../" class="logo">Bell Berries</a>
         </div>
         <div class="navbar-right">
 
@@ -30,91 +30,40 @@
         </div>
     </div>
     <div class="hero">
-        <div class="announcement-div">
-            <h2 class="announcement">Reserve Strawberries</h2>
-        </div>
-        <div class="form">
-            <form id="berryForm">
-                <div class="form-div your-name">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" required>
+        <div class="hero-main">
+            <h3 class="hero-main-open">
+                Open Now!
+            </h3>
+            <h4 class="hours">
+                <span class="hours-title">Hours</span>
+                <span class="hours-days">Open Monday-Saturday,</span>
+                <span class="hours-time">9:00 AM to 3:00 PM as supplies last</span>
+            </h4>
+            <a href="../reserve/" class="reserve-berries">Preorder</a>
+            <div class="contact-us">
+                <h4 class="contact-text">
+                    Contact Us
+                </h4>
+                <div class="contact-links">
+                    <a href="tel:12097775721" class="phone-a">
+                        <img src="../content/phone.svg" alt="Phone Icon" class="phone-img">
+                    </a>
+                    <a href="https://wa.me/12097775721" class="whatsapp-a">
+                        <img src="../content/whatsapp.svg" alt="Whatsapp Logo" class="whatapp-img">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100083129211283&mibextid=ZbWKwL" class="facebook-a">
+                        <img src="../content/facebook.svg" alt="Facebook Logo - By Icons8" class="facebook-img">
+                    </a>
                 </div>
-                <div class="form-div your-name">
-                    <label for="date">Select a date not more than 2 days in advance</label>
-                    <input type="date" name="date" required>
-                </div>
-                <div class="form-div your-name">
-                    <label for="time">Select a time not before 9:30AM or after 3:00PM</label>
-                    <input type="time" name="time" min="09:30" max="15:00">
-                </div>
-                <div class="form-div your-name">
-                    <label for="amount">How many packs of strawberries do you want? (Refer to price chart on homepage)</label>
-                    <input type="text" name="amount" required>
-                </div>
-                <div class="form-div your-name">
-                    <label for="comments">Comments?</label>
-                    <input type="text" name="comments">
-                </div>
-                <div class="submit-div">
-                    <input type="submit" value="Submit" class="submit" id="submit-button">
-                </div>
-                <div class="return-div">
-                    <a href="../open" class="return">Home</a>
-                </div>
-               
-            </form>
-        </div>
-       
-    </div>
-    
-    <script>
-        document.getElementById('berryForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent form submission
-    
-            var submitButton = document.getElementById('submit-button');
-            submitButton.disabled = true; // Disable the button to prevent multiple submissions
-            submitButton.value = 'Submitting...'; // Change button text to "Submitting..."
-    
-            // Collect form data
-            var formData = new FormData(e.target);
-            var data = {};
-            formData.forEach((value, key) => data[key] = value);
-    
-            // Validate date to ensure it's not more than 2 days in advance
-            var today = new Date();
-            var maxDate = new Date(today);
-            maxDate.setDate(today.getDate() + 2);
-            var selectedDate = new Date(data.date);
-            
-            if (selectedDate > maxDate) {
-                alert('The selected date cannot be more than 2 days in advance.');
-                submitButton.disabled = false; // Re-enable the button
-                submitButton.value = 'Submit'; // Reset button text
-                return;
-            }
-    
-            // Send data to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxBaHqJH-Ax9q4RSXWCnuJgn8gbWpuzexGFxmqFeldT_UsvHOzho_tWmi1THjTzz3Pq/exec', {
-                method: 'POST',
-                mode: 'no-cors',
-                body: JSON.stringify(data),
-            }).then(response => {
-                submitButton.value = 'Submitted'; // Change button text to "Submitted"
-                document.getElementById('berryForm').reset(); // Clear the form
-                setTimeout(() => {
-                    submitButton.value = 'Submit'; // Reset button text after a short delay
-                    submitButton.disabled = false; // Re-enable the button
-                }, 2000); // Delay to show "Submitted" message
-            }).catch(error => {
-                alert('Error submitting form');
-                console.error('Error:', error);
-                submitButton.disabled = false; // Re-enable the button
-                submitButton.value = 'Submit'; // Reset button text
-            });
-        });
-    </script>
-    
-    
 
+            </div>
+        </div>
+        <div class="hero-right">
+            <h3 class="prices">
+                Prices
+            </h3>
+            <img src="../content/prices.jpg" alt="Official Bell Berries Price Sheet" class="prices-img">
+        </div>
+    </div>
 </body>
 </html>
