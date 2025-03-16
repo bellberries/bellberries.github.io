@@ -1,11 +1,30 @@
+/* ubuntu-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/ubuntu-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* ubuntu-700 - latin */
+  @font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/ubuntu-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+
 $color_1: black;
 $color_2: white;
 $color_3: rgb(174, 0, 0);
 $color_4: green;
 $font-family_1: "Ubuntu";
 
-@import "https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap";
-/*# sourceMappingURL=main.css.map */
+
+
 body {
 	margin: 0;
 	padding: 0;
