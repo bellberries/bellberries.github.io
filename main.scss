@@ -1,0 +1,284 @@
+$color_1: black;
+$color_2: white;
+$color_3: rgb(174, 0, 0);
+$color_4: green;
+$font-family_1: "Ubuntu";
+
+@import "https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap";
+/*# sourceMappingURL=main.css.map */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-family_1;
+	background-color: beige;
+}
+.navbar {
+	background-color: red;
+	position: fixed;
+	width: 100%;
+	padding: 0.7em 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	top: 0;
+	.navbar-left {
+		.logo {
+			text-decoration: none;
+			color: $color_1;
+			font-weight: 700;
+			font-size: 1.8em;
+		}
+	}
+	.navbar-right {
+		a {
+			text-decoration: none;
+		}
+		.navbar-ul {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			margin: 0;
+			.navbar-li {
+				display: flex;
+				align-items: center;
+				img {
+					height: 1.8em;
+				}
+				.navbar-p {
+					color: $color_1;
+					margin: 0;
+					font-size: 0.8em;
+					span {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+.hero {
+	margin-top: 3.5em;
+	display: block;
+	margin-left: 1em;
+	margin-right: 1em;
+	justify-content: center;
+	.hero-main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.hero-main-open {
+			text-align: center;
+			font-size: 2em;
+			font-weight: 300;
+			margin-bottom: 0;
+		}
+		.hours {
+			font-weight: 300;
+			padding: 0.5em 1em;
+			background-color: red;
+			border-radius: 1em;
+			text-align: center;
+			font-size: 1.2em;
+			span {
+				display: block;
+			}
+			.hours-title {
+				font-size: 1.5em;
+				margin-bottom: 0.2em;
+			}
+		}
+		.reserve-berries {
+			padding: 0.5em 1em;
+			background-color: rgb(174, 0, 0);
+			color: $color_2;
+			border-radius: 1em;
+			text-decoration: none;
+			font-size: 1.5em;
+			margin-top: -0.5em;
+		}
+		.contact-us {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.contact-text {
+				font-size: 2em;
+				font-weight: 300;
+				margin-bottom: 0.5em;
+			}
+			.contact-links {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-bottom: 1em;
+				a {
+					text-decoration: none;
+					display: flex;
+					align-items: center;
+					margin: 0 0.5em;
+					img {
+						width: 2em;
+					}
+				}
+			}
+		}
+	}
+	.status {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.hero-h3 {
+			font-weight: 300;
+			font-size: 2em;
+			text-align: center;
+			font-size: 2em;
+			span {
+				display: block;
+			}
+			.status-closed-for-season {
+				font-weight: 700;
+				color: $color_3;
+			}
+			.status-planting-season {
+				font-weight: 700;
+				color: $color_4;
+			}
+		}
+		.closed {
+			width: 20em;
+			height: 20em;
+			border-radius: 1em;
+			margin-top: -1.5em;
+		}
+	}
+	.hero-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1em;
+		.prices {
+			text-align: center;
+			font-size: 2em;
+			font-weight: 300;
+			margin-bottom: 0.5em;
+		}
+		.prices-img {
+			width: 20em;
+			border-radius: 1em;
+		}
+	}
+	.announcement-div {
+		display: block;
+		.announcement {
+			color: $color_3;
+			text-align: center;
+			margin-top: 2.5em;
+			font-size: 2em;
+		}
+	}
+	.form {
+		display: block;
+		form {
+			font-size: 1em;
+			display: flex;
+			flex-direction: column;
+			.form-div {
+				margin: 0.5em 0;
+				display: flex;
+				justify-content: space-between;
+				border: 0.2em solid;
+				border-color: rgb(174, 0, 0);
+				border-radius: 1em;
+				padding: 0.5em 1em;
+				input {
+					border: none;
+					border-radius: 1em;
+					margin-left: 1em;
+					padding: 0.5em;
+				}
+			}
+			.your-name {
+				align-items: center;
+			}
+			.submit-div {
+				text-align: center;
+				margin-bottom: 1em;
+				.submit {
+					border: 0.2em solid;
+					font-size: 1.2em;
+					border-color: rgb(174, 0, 0);
+					background-color: rgb(174, 0, 0);
+					color: $color_2;
+					border-radius: 1em;
+					padding: 0.3em 0.5em;
+					margin-top: 0.5em;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.return-div {
+		text-align: center;
+		.return {
+			text-decoration: none;
+			color: $color_1;
+			background-color: beige;
+			border: 0.2em solid;
+			border-radius: 1em;
+			border-color: rgb(174, 0, 0);
+			padding: 0.3em 0.5em;
+			font-size: 1.2em;
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	.navbar {
+		.navbar-left {
+			.logo {
+				font-size: 2.5em;
+			}
+		}
+		.navbar-right {
+			.navbar-ul {
+				.navbar-li {
+					.navbar-p {
+						.city-span {
+							display: inline;
+							font-size: 1.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.hero {
+		display: flex;
+		.hero-main {
+			margin-right: 3em;
+		}
+		.status {
+			margin-right: 3em;
+			max-width: 20em;
+			.hero-h3 {
+				span {
+					display: inline;
+				}
+			}
+			.closed {
+				margin-top: 0;
+			}
+		}
+		.hero-right {
+			margin-left: 3em;
+			margin-bottom: 0;
+		}
+		.form {
+			margin-top: 3em;
+			form {
+				font-size: 1.2em;
+			}
+		}
+	}
+}
