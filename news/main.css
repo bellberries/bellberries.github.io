@@ -107,6 +107,7 @@ body {
   color: white;
   font-weight: 700;
   font-size: 1.5em;
+  margin-bottom: 0.3em;
 }
 .news-chips .news-chip .bottom .date {
   text-align: right;
@@ -123,7 +124,7 @@ body {
     font-size: 1.5em;
   }
   .news .news-body .image {
-    width: 50%;
+    width: 30%;
   }
   .news-chips {
     flex-direction: row;

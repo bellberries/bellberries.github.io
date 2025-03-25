@@ -154,6 +154,10 @@ body {
   font-weight: 700;
   color: green;
 }
+.hero .status .hero-h3 a {
+  text-decoration: none;
+  color: black;
+}
 .hero .status .closed {
   width: 20em;
   height: 20em;
