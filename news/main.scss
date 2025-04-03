@@ -118,12 +118,13 @@ body {
         border-radius: 1em;
         margin-bottom: 3em;
         text-decoration: none;
-	border-bottom-right-radius: none;
+		border-bottom-right-radius: 0em;
 
 
         .chip-image {
 
             max-width: 100%;
+			min-width: 100%;
             margin: 0;
             padding: 0;
             display: block;
@@ -135,6 +136,7 @@ body {
 
             background-color: $color_3;
             padding: .7em;
+			max-width: 100%;
 
             .title {
 

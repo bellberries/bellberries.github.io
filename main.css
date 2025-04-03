@@ -127,10 +127,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin: 0 0.5em;
-}
-.hero .hero-main .contact-us .contact-links a img {
-  width: 2em;
+  margin: 0 1em;
 }
 .hero .status {
   display: flex;
@@ -142,9 +139,11 @@ body {
   font-size: 2em;
   text-align: center;
   font-size: 2em;
+  margin-bottom: 0em;
 }
 .hero .status .hero-h3 span {
   display: block;
+  font-weight: 300;
 }
 .hero .status .hero-h3 .status-closed-for-season {
   font-weight: 700;
@@ -243,6 +242,61 @@ body {
   font-size: 1.2em;
 }
 
+.news-chip {
+  width: 80%;
+  overflow: hidden;
+  border-radius: 1em;
+  margin-bottom: 3em;
+  text-decoration: none;
+  border-bottom-right-radius: 0em;
+}
+.news-chip .chip-image {
+  max-width: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.news-chip .bottom {
+  background-color: rgb(174, 0, 0);
+  padding: 0.7em;
+  max-width: 100%;
+}
+.news-chip .bottom .title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+}
+.news-chip .bottom .date {
+  text-align: right;
+  color: white;
+  font-size: 1.1em;
+}
+
+.secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.secondary .facebook h4 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+.secondary .contact-text {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+.secondary .contact-links a {
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 768px) {
   .navbar .navbar-left .logo {
     font-size: 2.5em;
@@ -276,5 +330,20 @@ body {
   }
   .hero .form form {
     font-size: 1.2em;
+  }
+  .news-chip {
+    width: 20em;
+    margin: 1em;
+  }
+  .secondary {
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+  }
+  .secondary .facebook {
+    margin-right: 3em;
+  }
+  .secondary .contact-us {
+    margin-left: 3em;
   }
 }/*# sourceMappingURL=main.css.map */
