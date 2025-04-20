@@ -132,6 +132,7 @@ body {
   .news-chips {
     flex-direction: row;
     padding: 2em;
+    align-items: baseline;
   }
   .news-chips .news-chip {
     width: 20em;

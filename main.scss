@@ -1,21 +1,25 @@
 /* ubuntu-regular - latin */
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 	font-family: 'Ubuntu';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/ubuntu-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* ubuntu-700 - latin */
-  @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	src: url('/fonts/ubuntu-v20-latin-regular.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ubuntu-700 - latin */
+@font-face {
+	font-display: swap;
+	/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 	font-family: 'Ubuntu';
 	font-style: normal;
 	font-weight: 700;
-	src: url('/fonts/ubuntu-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
+	src: url('/fonts/ubuntu-v20-latin-700.woff2') format('woff2');
+	/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 
 $color_1: black;
 $color_2: white;
@@ -23,6 +27,13 @@ $color_3: rgb(174, 0, 0);
 $color_4: green;
 $font-family_1: "Ubuntu";
 
+.hero-h3 {
+	font-weight: 300;
+	font-size: 2em;
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: 0em;
+}
 
 
 body {
@@ -31,6 +42,7 @@ body {
 	font-family: $font-family_1;
 	background-color: beige;
 }
+
 .navbar {
 	background-color: red;
 	position: fixed;
@@ -41,6 +53,7 @@ body {
 	align-items: center;
 	box-sizing: border-box;
 	top: 0;
+
 	.navbar-left {
 		.logo {
 			text-decoration: none;
@@ -49,26 +62,32 @@ body {
 			font-size: 1.8em;
 		}
 	}
+
 	.navbar-right {
 		a {
 			text-decoration: none;
 		}
+
 		.navbar-ul {
 			list-style-type: none;
 			display: flex;
 			align-items: center;
 			padding: 0;
 			margin: 0;
+
 			.navbar-li {
 				display: flex;
 				align-items: center;
+
 				img {
 					height: 1.8em;
 				}
+
 				.navbar-p {
 					color: $color_1;
 					margin: 0;
 					font-size: 0.8em;
+
 					span {
 						display: block;
 					}
@@ -77,22 +96,59 @@ body {
 		}
 	}
 }
+
+.web-top {
+	margin-top: 2.5em;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	.left {
+
+		padding: 1em;
+
+		.about-us {
+
+			font-size: 1em;
+
+		}
+
+	}
+
+	.right {
+
+		padding: 1em;
+		max-width: 20em;
+
+		p {
+
+			font-size: 1.5em;
+			margin-top: .5em;
+
+		}
+
+	}
+
+}
+
 .hero {
-	margin-top: 3.5em;
 	display: block;
 	margin-left: 1em;
 	margin-right: 1em;
 	justify-content: center;
+
 	.hero-main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
 		.hero-main-open {
 			text-align: center;
 			font-size: 2em;
 			font-weight: 300;
 			margin-bottom: 0;
 		}
+
 		.hours {
 			font-weight: 300;
 			padding: 0.5em 1em;
@@ -100,14 +156,17 @@ body {
 			border-radius: 1em;
 			text-align: center;
 			font-size: 1.2em;
+
 			span {
 				display: block;
 			}
+
 			.hours-title {
 				font-size: 1.5em;
 				margin-bottom: 0.2em;
 			}
 		}
+
 		.reserve-berries {
 			padding: 0.5em 1em;
 			background-color: rgb(174, 0, 0);
@@ -117,49 +176,58 @@ body {
 			font-size: 1.5em;
 			margin-top: -0.5em;
 		}
+
 		.contact-us {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
 			.contact-text {
 				font-size: 2em;
 				font-weight: 300;
 				margin-bottom: 0.5em;
 			}
+
 			.contact-links {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
 				margin-bottom: 1em;
+
 				a {
 					text-decoration: none;
 					display: flex;
 					align-items: center;
 					margin: 0 1em;
-					
+
 				}
 			}
 		}
 	}
+
 	.status {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
 		.hero-h3 {
 			font-weight: 300;
 			font-size: 2em;
 			text-align: center;
 			font-size: 2em;
 			margin-bottom: 0em;
+
 			span {
 				display: block;
 				font-weight: 300;
 			}
+
 			.status-closed-for-season {
 				font-weight: 700;
 				color: $color_3;
 			}
+
 			.status-planting-season {
 				font-weight: 700;
 				color: $color_4;
@@ -172,6 +240,7 @@ body {
 
 			}
 		}
+
 		.closed {
 			width: 20em;
 			height: 20em;
@@ -179,24 +248,29 @@ body {
 			//margin-top: -1.5em;
 		}
 	}
+
 	.hero-right {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin-bottom: 1em;
+
 		.prices {
 			text-align: center;
 			font-size: 2em;
 			font-weight: 300;
 			margin-bottom: 0.5em;
 		}
+
 		.prices-img {
 			width: 20em;
 			border-radius: 1em;
 		}
 	}
+
 	.announcement-div {
 		display: block;
+
 		.announcement {
 			color: $color_3;
 			text-align: center;
@@ -204,49 +278,11 @@ body {
 			font-size: 2em;
 		}
 	}
-	.form {
-		display: block;
-		form {
-			font-size: 1em;
-			display: flex;
-			flex-direction: column;
-			.form-div {
-				margin: 0.5em 0;
-				display: flex;
-				justify-content: space-between;
-				border: 0.2em solid;
-				border-color: rgb(174, 0, 0);
-				border-radius: 1em;
-				padding: 0.5em 1em;
-				input {
-					border: none;
-					border-radius: 1em;
-					margin-left: 1em;
-					padding: 0.5em;
-				}
-			}
-			.your-name {
-				align-items: center;
-			}
-			.submit-div {
-				text-align: center;
-				margin-bottom: 1em;
-				.submit {
-					border: 0.2em solid;
-					font-size: 1.2em;
-					border-color: rgb(174, 0, 0);
-					background-color: rgb(174, 0, 0);
-					color: $color_2;
-					border-radius: 1em;
-					padding: 0.3em 0.5em;
-					margin-top: 0.5em;
-					cursor: pointer;
-				}
-			}
-		}
-	}
+
+
 	.return-div {
 		text-align: center;
+
 		.return {
 			text-decoration: none;
 			color: $color_1;
@@ -265,9 +301,10 @@ body {
 	width: 80%;
 	overflow: hidden;
 	border-radius: 1em;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	text-decoration: none;
 	border-bottom-right-radius: 0em;
+	margin-top: 1em;
 
 
 	.chip-image {
@@ -308,12 +345,23 @@ body {
 
 }
 
+.more-news {
+
+	color: white;
+	background-color: $color_3;
+	padding: .5em 1em;
+	font-size: 1.5em;
+	border-radius: 1em;
+	text-decoration: none;
+
+}
+
 .secondary {
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	
+
 	margin-bottom: 1em;
 	text-align: center;
 
@@ -330,7 +378,7 @@ body {
 
 	}
 
-	
+
 	.contact-text {
 
 		text-align: center;
@@ -346,19 +394,26 @@ body {
 
 			text-decoration: none;
 
-			
+
 		}
 
 	}
 
 }
+
 @media only screen and (min-width: 768px) {
+
+
+	
+
+
 	.navbar {
 		.navbar-left {
 			.logo {
 				font-size: 2.5em;
 			}
 		}
+
 		.navbar-right {
 			.navbar-ul {
 				.navbar-li {
@@ -372,32 +427,61 @@ body {
 			}
 		}
 	}
+
+	.web-top {
+
+	flex-direction: row;
+	justify-content: center;
+
+		.left {
+
+			width: 20em;
+			padding: 0;
+			margin: .5em 2em;
+
+			.about-us {
+
+				font-size: 1.3em;
+
+			}
+
+		}
+
+		.right {
+
+			margin-left: 0;
+			width: 20em;
+			padding: 0;
+			margin: .5em 2em;
+
+		}
+	}
+
 	.hero {
 		display: flex;
-		.hero-main {
-			margin-right: 3em;
-		}
+		justify-content: center;
+
 		.status {
-			margin-right: 3em;
-			max-width: 20em;
+			width: 20em;
+			margin: .5em 2em;
+			padding: 0;
+
 			.hero-h3 {
 				span {
 					display: inline;
 				}
 			}
+
 			.closed {
 				margin-top: 0;
 			}
 		}
+
 		.hero-right {
-			margin-left: 3em;
 			margin-bottom: 0;
-		}
-		.form {
-			margin-top: 3em;
-			form {
-				font-size: 1.2em;
-			}
+			width: 20em;
+			margin: .5em 2em;
+			padding: 0;
 		}
 	}
 
@@ -413,18 +497,22 @@ body {
 		flex-direction: row;
 		justify-content: center;
 		align-items: normal;
-		.facebook {
+		justify-content: center;
 
-			margin-right: 3em;
+			.facebook {
 
-		}
-		.contact-us {
+				width: 20em;
+				margin: .5em 2em;
+				padding: 0;
 
-			margin-left: 3em;
+			}
 
-		}
+			.contact-us {
 
-		
+				width: 20em;
+				margin: .5em 2em;
+				padding: 0;
 
+			}
 	}
 }

@@ -1,19 +1,31 @@
 /* ubuntu-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ubuntu-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/ubuntu-v20-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* ubuntu-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ubuntu-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("/fonts/ubuntu-v20-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.hero-h3 {
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0em;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -64,8 +76,28 @@ body {
   display: block;
 }
 
+.web-top {
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.web-top .left {
+  padding: 1em;
+}
+.web-top .left .about-us {
+  font-size: 1em;
+}
+.web-top .right {
+  padding: 1em;
+  max-width: 20em;
+}
+.web-top .right p {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
 .hero {
-  margin-top: 3.5em;
   display: block;
   margin-left: 1em;
   margin-right: 1em;
@@ -187,47 +219,6 @@ body {
   margin-top: 2.5em;
   font-size: 2em;
 }
-.hero .form {
-  display: block;
-}
-.hero .form form {
-  font-size: 1em;
-  display: flex;
-  flex-direction: column;
-}
-.hero .form form .form-div {
-  margin: 0.5em 0;
-  display: flex;
-  justify-content: space-between;
-  border: 0.2em solid;
-  border-color: rgb(174, 0, 0);
-  border-radius: 1em;
-  padding: 0.5em 1em;
-}
-.hero .form form .form-div input {
-  border: none;
-  border-radius: 1em;
-  margin-left: 1em;
-  padding: 0.5em;
-}
-.hero .form form .your-name {
-  align-items: center;
-}
-.hero .form form .submit-div {
-  text-align: center;
-  margin-bottom: 1em;
-}
-.hero .form form .submit-div .submit {
-  border: 0.2em solid;
-  font-size: 1.2em;
-  border-color: rgb(174, 0, 0);
-  background-color: rgb(174, 0, 0);
-  color: white;
-  border-radius: 1em;
-  padding: 0.3em 0.5em;
-  margin-top: 0.5em;
-  cursor: pointer;
-}
 .hero .return-div {
   text-align: center;
 }
@@ -246,9 +237,10 @@ body {
   width: 80%;
   overflow: hidden;
   border-radius: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   text-decoration: none;
   border-bottom-right-radius: 0em;
+  margin-top: 1em;
 }
 .news-chip .chip-image {
   max-width: 100%;
@@ -272,6 +264,15 @@ body {
   text-align: right;
   color: white;
   font-size: 1.1em;
+}
+
+.more-news {
+  color: white;
+  background-color: rgb(174, 0, 0);
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  border-radius: 1em;
+  text-decoration: none;
 }
 
 .secondary {
@@ -305,15 +306,32 @@ body {
     display: inline;
     font-size: 1.5em;
   }
+  .web-top {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .web-top .left {
+    width: 20em;
+    padding: 0;
+    margin: 0.5em 2em;
+  }
+  .web-top .left .about-us {
+    font-size: 1.3em;
+  }
+  .web-top .right {
+    margin-left: 0;
+    width: 20em;
+    padding: 0;
+    margin: 0.5em 2em;
+  }
   .hero {
     display: flex;
-  }
-  .hero .hero-main {
-    margin-right: 3em;
+    justify-content: center;
   }
   .hero .status {
-    margin-right: 3em;
-    max-width: 20em;
+    width: 20em;
+    margin: 0.5em 2em;
+    padding: 0;
   }
   .hero .status .hero-h3 span {
     display: inline;
@@ -322,14 +340,10 @@ body {
     margin-top: 0;
   }
   .hero .hero-right {
-    margin-left: 3em;
     margin-bottom: 0;
-  }
-  .hero .form {
-    margin-top: 3em;
-  }
-  .hero .form form {
-    font-size: 1.2em;
+    width: 20em;
+    margin: 0.5em 2em;
+    padding: 0;
   }
   .news-chip {
     width: 20em;
@@ -339,11 +353,16 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: normal;
+    justify-content: center;
   }
   .secondary .facebook {
-    margin-right: 3em;
+    width: 20em;
+    margin: 0.5em 2em;
+    padding: 0;
   }
   .secondary .contact-us {
-    margin-left: 3em;
+    width: 20em;
+    margin: 0.5em 2em;
+    padding: 0;
   }
 }/*# sourceMappingURL=main.css.map */
