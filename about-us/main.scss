@@ -1,0 +1,56 @@
+.body {
+
+    text-align: center;
+
+}
+h3 {
+
+    margin-top: 3em;
+
+}
+div {
+
+   display: flex;
+   justify-content: center;
+
+    .about-us {
+
+        width: 80%;
+        font-size: 1.2em;
+        text-align: center;
+        margin-top: 0;
+
+    }
+}
+.contact-us {
+
+    flex-direction: column;
+
+}
+
+.contact-us-title {
+
+    margin-top: .5em;
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .hero-h3 {
+
+        font-size: 2em;
+
+    }
+
+    div {
+
+        .about-us {
+
+            width: 30em;
+            font-size: 1.3em;
+
+        }
+
+    }
+
+}

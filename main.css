@@ -23,7 +23,7 @@
   font-size: 2em;
   text-align: center;
   font-size: 2em;
-  margin-bottom: 0em;
+  margin-bottom: 0.5em;
 }
 
 body {
@@ -84,9 +84,24 @@ body {
 }
 .web-top .left {
   padding: 1em;
+  text-align: center;
 }
 .web-top .left .about-us {
-  font-size: 1em;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+.web-top .left .aboutus {
+  color: white;
+  background-color: rgb(174, 0, 0);
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  border-radius: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-align: center;
 }
 .web-top .right {
   padding: 1em;

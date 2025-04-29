@@ -32,7 +32,7 @@ $font-family_1: "Ubuntu";
 	font-size: 2em;
 	text-align: center;
 	font-size: 2em;
-	margin-bottom: 0em;
+	margin-bottom: .5em;
 }
 
 
@@ -106,10 +106,26 @@ body {
 	.left {
 
 		padding: 1em;
+		text-align: center;
 
 		.about-us {
 
-			font-size: 1em;
+			font-size: 1.1em;
+			margin-bottom: 1.5em;
+
+		}
+
+		.aboutus {
+
+			color: white;
+			background-color: $color_3;
+			padding: .5em 1em;
+			font-size: 1.5em;
+			border-radius: 1em;
+			text-decoration: none;
+			cursor: pointer;
+			user-select: none;
+			text-align: center;
 
 		}
 
